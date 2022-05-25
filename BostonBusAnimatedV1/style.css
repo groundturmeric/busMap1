@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Helvetica";
+    margin-left: 5%;
+    background-color: rgb(29, 28, 33);
+    /* color: #FFFF7C; */
+    color:#faa61a;
+}
+
+#chartmassnetwork {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-color: rgb(39, 39, 39); */
+}
+
+#options2 {
+    position: absolute;
+    /* top: 0px; */
+    right: 0px;
+    width: 30%;
+    height: 100vh;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    z-index: 100;
+    background-color: rgba(255,255,255,0);
+    
+}
+
+
+
+
+
+
+#filters {
+    font-size: 14pt;
+    line-height: 26pt;
+}
+
+#filters.type{
+  font-size: 44pt;
+
+}
+
+
+h1 {
+    font-size: 32pt;
+}
+
+/* .state {
+      fill: rgb(115, 115, 115);
+    stroke: #333333;
+    stroke-width: 0.2;
+} */
+
+
+.busroutes {
+  /* fill: none; */
+  /* stroke: white; */
+  /* stroke-width: 0; */
+}
+
+
+.tracts {
+  fill: rgb(115, 115, 115);
+  stroke-width: 0;
+}
+
+.tracts.active { 
+  /* fill: rgb(142, 0, 0); */
+  fill: rgb(185, 185, 185);
+
+}
+
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 14pt;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    top: 0px;
+    left: 0px;
+}
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    /* background-color: #2196F3; */
+    background-color:#9467bd;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+
+  /*
+  ANIMATIONS
+*/
+
+
+/*
+/* original */
+ /* @keyframes trolley-path-move {
+  to {
+    stroke-dashoffset: 100%;
+    stroke-dasharray: 34%;
+    stroke-dashoffset: 90%;
+
+  }
+}
+
+.busroutes{
+  animation: trolley-path-move 20s alternate-reverse infinite;
+  stroke-dasharray: 34%;
+  
+  } */
+
+.busroutes{
+/* animation: trolley-path-move 15s alternate-reverse infinite; */
+/* stroke-dasharray: 10%; */
+
+stroke-linecap: round;
+/* stroke-width: 10px; */
+
+} 
+
+
+
+@keyframes trolley-path-move {
+  to {
+    stroke-dashoffset: 99%;
+    /* stroke-dashoffset: 10%; */
+  }
+}
+
+.busroutes{
+/* animation: trolley-path-move 20s alternate-reverse infinite; */
+/* stroke-dasharray: 50%;
+stroke-dashoffset: 0%; */
+
+}
