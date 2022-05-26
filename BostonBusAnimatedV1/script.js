@@ -18,8 +18,11 @@ Promise.all(promises).then(function (data) {
     const height = document.querySelector("#chartmassnetwork").clientHeight;
     const svg = d3.select("#chartmassnetwork")
         .append("svg")
-        .attr("width", width)
-        .attr("height", height);
+//         .attr("width", width)
+//         .attr("height", height)    
+        .attr("preserveAspectRatio", "xMinYMin meet")
+//         .style("background-color", "#fff")
+        .attr("viewBox", "0 0 " + window.innerWidth + " " + window.innerHeight)
 
 
 
